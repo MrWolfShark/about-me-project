@@ -2,6 +2,15 @@ h1 {
   color: #41B3A3;
   font-family: Arial, Helvetica, sans-serif;
   font-style: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  color: #41B3A3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  font-size: 60px;
   text-align: center;
 }
 
