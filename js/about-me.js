@@ -11,7 +11,7 @@ console.log("username= " + username);
 
 alert(`Welcome to Aaron's About Me Page ${username}!\n Please look around and learn more about Aaron. There is a button at the bottom of the page to take the quiz at the end!`);
 
-alert("Thanks for learning about Aaron. Please answer the following 5 Yes or No questions.");
+alert("Thanks for learning about Aaron. Please answer the following 5 Yes or No questions followed by 2 open answer questions.");
 while (true) {
   // Asks user question
   let question = prompt("1. Was Aaron born in Kansas?");
