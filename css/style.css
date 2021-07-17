@@ -1,30 +1,35 @@
-h1 {
-  color: #41B3A3;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: bold;
-  font-size: 50px;
-  text-align: center;
-}
-
-h2 {
-  color: #41B3A3;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: bold;
-  font-size: 60px;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color:floralwhite;
-  padding-left: 25%;
-  padding-right: 25%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #41B3A3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2, h4 {
+  color: #41B3A3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  text-align: center;
+  font-size: 18px;
+  margin:10px;
 }
 
 .description {
   color: #e27d60;
 }
 
-.bio {
+.headings {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -36,66 +41,38 @@ body {
   border-width: 5px;
   text-align: center;
   justify-content: center;
-}
-
-.professional {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: #e27d60;
-  background-color: #85dcb8;
-  border: #41B3A3;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 5px;
-  text-align: center;
-  justify-content: center;
-}
-
-.goals {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: #e27d60;
-  background-color: #85dcb8;
-  border: #41B3A3;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 5px;
-  text-align: center;
-  justify-content: center;
+  width:max-content;
+  margin: 0 auto;
 }
 
 p {
-  position: relative;
   color: #e27d60;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
+  margin: 10px;
 }
 
 ol {
+  list-style: none;
+  counter-reset: mycounter;
+  padding-left: 10 px;
+}
+
+ol li {
+  color: #e27d60;
+  font-family: Arial, Helvetica, sans-serif;
+  counter-increment: mycounter;
+  padding-left: 10 px;
+}
+
+ol li::before {
+  content: counter(mycounter);
+  color: #41B3A3;
+  font-weight: bold;
+  padding-left: 10 px;
+}
+
+li span{
   position: relative;
-  color: #e27d60;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-}
-
-.quiz-button {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: #e27d60;
-  background-color: #85dcb8;
-  border: #41B3A3;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 5px;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin-left: 35%;
-}
-
-.quiz-button:hover {
-  background-color: white;
+  left: 10px;
 }
