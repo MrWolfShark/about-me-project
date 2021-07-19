@@ -206,9 +206,9 @@ let score = correctAnswerCount / 7
 score = Math.round(score * 100)
 
 // evaluates score and alerts user of score
-if (correctAnswerCount == 0 || correctAnswerCount == 2) {
+if (correctAnswerCount == 0 || correctAnswerCount <= 2) {
   alert(`Thanks for completing the quiz ${username}!\n You scored ${score}%! D:`)
-} else if (correctAnswerCount == 3 || correctAnswerCount == 5) {
+} else if (correctAnswerCount >= 3 && correctAnswerCount <= 5) {
   alert(`Thanks for completing the quiz ${username}!\n You scored ${score}%! :)`)
 } else if (correctAnswerCount == 6 || correctAnswerCount == 7)  {
   alert(`Thanks for completing the quiz ${username}!\n You scored ${score}%! :D`)
