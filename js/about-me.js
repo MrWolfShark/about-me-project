@@ -176,42 +176,42 @@ function questionSix() {
     }
   }
 }
+function questionSeven() {
+  // array of possible answers
+  let listOfColors = ['GREEN', 'BLUE', 'PURPLE', 'WHITE', 'BLACK', 'RED', 'YELLOW', 'ORANGE', 'CYAN', 'MAGENTA', 'BROWN', 'TAN']
+  // arrays of correct answers
+  let listOfAnswers = ['GREEN', 'BLUE', 'PURPLE']
 
-// array of possible answers
-let listOfColors = ['GREEN', 'BLUE', 'PURPLE', 'WHITE', 'BLACK', 'RED', 'YELLOW', 'ORANGE', 'CYAN', 'MAGENTA', 'BROWN', 'TAN']
-// arrays of correct answers
-let listOfAnswers = ['GREEN', 'BLUE', 'PURPLE']
+  // sets attempts to 6 for next question
+  let attempts = 6
 
-// sets attempts to 6 for next question
-attempts = 6
-
-while (attempts) {
-  // prompts question and gives possible answers
-  let answer = prompt(`What is one of Aaron's favorite colors?\nPossible Answers:\n\n${listOfColors[0]}\n${listOfColors[1]}\n${listOfColors[2]}\n${listOfColors[3]}\n${listOfColors[4]}\n${listOfColors[5]}\n${listOfColors[6]}\n${listOfColors[7]}\n${listOfColors[8]}\n${listOfColors[9]}\n${listOfColors[10]}\n${listOfColors[11]}\n`);
+  while (attempts) {
+    // prompts question and gives possible answers
+    let answer = prompt(`What is one of Aaron's favorite colors?\nPossible Answers:\n\n${listOfColors[0]}\n${listOfColors[1]}\n${listOfColors[2]}\n${listOfColors[3]}\n${listOfColors[4]}\n${listOfColors[5]}\n${listOfColors[6]}\n${listOfColors[7]}\n${listOfColors[8]}\n${listOfColors[9]}\n${listOfColors[10]}\n${listOfColors[11]}\n`);
 
 
-  // logs answer to console
-  console.log(`answer = ${answer}`)
+    // logs answer to console
+    console.log(`answer = ${answer}`)
 
-  // subtracts 1 from attempts
-  attempts--;
-  
-  // loops through correct answers to see if answer is correct
-  for (let i = 0; i < listOfAnswers.length; i++) {
-    if (answer.toUpperCase() === listOfAnswers[i]) {
-      alert(`That's correct. ${listOfAnswers[i]} is a fabuluous color!`);
-      // increments correctAnswerCount by 1
-      correctAnswerCount++;
-      // sets attempts to 0 to break while loop
-      attempts = 0;
-      // break for loop
-      break;
-    } else {
-      continue;
+    // subtracts 1 from attempts
+    attempts--;
+    
+    // loops through correct answers to see if answer is correct
+    for (let i = 0; i < listOfAnswers.length; i++) {
+      if (answer.toUpperCase() === listOfAnswers[i]) {
+        alert(`That's correct. ${listOfAnswers[i]} is a fabuluous color!`);
+        // increments correctAnswerCount by 1
+        correctAnswerCount++;
+        // sets attempts to 0 to break while loop
+        attempts = 0;
+        // break for loop
+        break;
+      } else {
+        continue;
+      }
     }
   }
 }
-
 // math for score calculation
 let score = correctAnswerCount / 7
 score = Math.round(score * 100)
