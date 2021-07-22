@@ -12,27 +12,29 @@ console.log("username= " + username);
 alert(`Welcome to Aaron's About Me Page ${username}!\n Please look around and learn more about Aaron. There is a button at the bottom of the page to take the quiz at the end!`);
 
 alert("Thanks for learning about Aaron. Please answer the following 5 Yes or No questions followed by 2 open answer questions.");
-while (true) {
-  // Asks user question
-  let question = prompt("1. Was Aaron born in Kansas?");
-  // evaluates answer to see if yes
-  if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
-    // alerts user of incorrect answer
-    alert("That's incorrect. Aaron was born in Texas.");
-    // breaks loops
-    break;
-    //evaluates answer to see if no
-  } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
-    // alerts user of correct answer
-    alert("That's Correct! Next question.");
-    // adds 20 to score
-    correctAnswerCount++;
-    // breaks loop
-    break;
-    // catch all for any other input
-  } else {
-    // alerts for invalid answer
-    alert("That is not a valid answer. Try again.")
+function questionOne() {
+  while (true) { 
+    // Asks user question
+    let question = prompt("1. Was Aaron born in Kansas?");
+    // evaluates answer to see if yes
+    if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
+      // alerts user of incorrect answer
+      alert("That's incorrect. Aaron was born in Texas.");
+      // breaks loops
+      break;
+      //evaluates answer to see if no
+    } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
+      // alerts user of correct answer
+      alert("That's Correct! Next question.");
+      // adds 20 to score
+      correctAnswerCount++;
+      // breaks loop
+      break;
+      // catch all for any other input
+    } else {
+      // alerts for invalid answer
+      alert("That is not a valid answer. Try again.")
+    }
   }
 }
 while (true) {
