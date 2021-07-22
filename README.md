@@ -1,10 +1,10 @@
-# LAB - 02
+# LAB - 04
 
 ## About Me Web Page
 
 I built an about me webpage. The page will query the user for their name. Then once the user has read the page, they can start a quiz that gives them 5 questions. The quiz is graded and then let's them know how they did.
 
-### Author: Aaron Burke Code201n23
+### Authors: Aaron Burke and Christine Lora Code201n23
 
 ### Reflections and Comments
 
