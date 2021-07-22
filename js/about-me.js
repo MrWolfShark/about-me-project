@@ -112,27 +112,29 @@ function questionFour() {
     }
   }
 }
-while (true) {
-  // Asks user question
-  let question = prompt("5. Is Aaron's short term goal to be the Director of Engineering Services at his company?");
-  // evaluates answer to see if yes
-  if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
-    // alerts user of correct answer
-    alert("That's Correct!");
-    // adds 20 to score
-    correctAnswerCount++;
-    // breaks loops
-    break;
-    //evaluates answer to see if no
-  } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
-    // alerts user of incorrect answer
-    alert("That's incorrect. Aaron's short term goal is to be the Director of Engineering Services.");
-    // breaks loop
-    break;
-    // catch all for any other input
-  } else {
-    // alerts for invalid answer
-    alert("That is not a valid answer. Try again.")
+function questionFive() {
+  while (true) {
+    // Asks user question
+    let question = prompt("5. Is Aaron's short term goal to be the Director of Engineering Services at his company?");
+    // evaluates answer to see if yes
+    if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
+      // alerts user of correct answer
+      alert("That's Correct!");
+      // adds 20 to score
+      correctAnswerCount++;
+      // breaks loops
+      break;
+      //evaluates answer to see if no
+    } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
+      // alerts user of incorrect answer
+      alert("That's incorrect. Aaron's short term goal is to be the Director of Engineering Services.");
+      // breaks loop
+      break;
+      // catch all for any other input
+    } else {
+      // alerts for invalid answer
+      alert("That is not a valid answer. Try again.")
+    }
   }
 }
 
