@@ -87,27 +87,29 @@ function questionThree() {
     }
   }
 }
-while (true) {
-  // Asks user question
-  let question = prompt("4. Has Aaron travelled outside the US?");
-  // evaluates answer to see if yes
-  if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
-    // alerts user of correct answer
-    alert("That's Correct! Next question.");
-    // adds 20 to score
-    correctAnswerCount++;
-    // breaks loops
-    break;
-    //evaluates answer to see if no
-  } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
-    // alerts user of incorrect answer
-    alert("That's incorrect. Aaron has visited many countries during his time in the military.");
-    // breaks loop
-    break;
-    // catch all for any other input
-  } else {
-    // alerts for invalid answer
-    alert("That is not a valid answer. Try again.")
+function questionFour() {
+  while (true) {
+    // Asks user question
+    let question = prompt("4. Has Aaron travelled outside the US?");
+    // evaluates answer to see if yes
+    if (question.toUpperCase() == "YES" || question.toUpperCase() == "Y") {
+      // alerts user of correct answer
+      alert("That's Correct! Next question.");
+      // adds 20 to score
+      correctAnswerCount++;
+      // breaks loops
+      break;
+      //evaluates answer to see if no
+    } else if (question.toUpperCase() == "NO" || question.toUpperCase() == "N") {
+      // alerts user of incorrect answer
+      alert("That's incorrect. Aaron has visited many countries during his time in the military.");
+      // breaks loop
+      break;
+      // catch all for any other input
+    } else {
+      // alerts for invalid answer
+      alert("That is not a valid answer. Try again.")
+    }
   }
 }
 while (true) {
