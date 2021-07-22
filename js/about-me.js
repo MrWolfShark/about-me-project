@@ -137,42 +137,43 @@ function questionFive() {
     }
   }
 }
-
+function questionSix() {
 // sets number of attempts allowed 
-let attempts = 4;
-//generates random number between 1 and 20
-var randomNumber = Math.floor(Math.random() * 20) + 1;
-// logs random number to console
-console.log(`randomNumber = ${randomNumber}`);
-// loops while attempts is greater than 0
-while (attempts) {
-  // asks user for number and stores answer
-  let answer = prompt(`Guess a number between 1 and 20.`);
-  // converts string to number
-  answer = parseFloat(answer);
-  // logs number to console
-  console.log(`answer = ${answer}`)
-  // of answer is less than or equal to 20 
-  if (answer <= 20){
-    // if answer is equal to random number the answer is correct, loop breaks, adds 1 to correct answers
-    if (answer === randomNumber) {
-      alert(`You are a great guesser! That's correct!`);
-      correctAnswerCount++;
-      break;
-    // else if answer is larger than number tell user
-    } else if (answer > randomNumber) {
-      alert(`That's not the right number. Maybe try a smaller one.`);
-      // subtract 1 from attempts
-      attempts--;
-    // else if answer is smaller than number tell user
-    } else if (answer < randomNumber) {
-      alert(`That's not the right number. Maybe try a bigger one.`);
-      // subtract 1 from attempts
-      attempts--;
-    }  
-  // if answer is not in range tell user to try again
-  } else {
-    alert(`That number is not from 1 to 20. Try again!`);
+  let attempts = 4;
+  //generates random number between 1 and 20
+  var randomNumber = Math.floor(Math.random() * 20) + 1;
+  // logs random number to console
+  console.log(`randomNumber = ${randomNumber}`);
+  // loops while attempts is greater than 0
+  while (attempts) {
+    // asks user for number and stores answer
+    let answer = prompt(`Guess a number between 1 and 20.`);
+    // converts string to number
+    answer = parseFloat(answer);
+    // logs number to console
+    console.log(`answer = ${answer}`)
+    // of answer is less than or equal to 20 
+    if (answer <= 20){
+      // if answer is equal to random number the answer is correct, loop breaks, adds 1 to correct answers
+      if (answer === randomNumber) {
+        alert(`You are a great guesser! That's correct!`);
+        correctAnswerCount++;
+        break;
+      // else if answer is larger than number tell user
+      } else if (answer > randomNumber) {
+        alert(`That's not the right number. Maybe try a smaller one.`);
+        // subtract 1 from attempts
+        attempts--;
+      // else if answer is smaller than number tell user
+      } else if (answer < randomNumber) {
+        alert(`That's not the right number. Maybe try a bigger one.`);
+        // subtract 1 from attempts
+        attempts--;
+      }  
+    // if answer is not in range tell user to try again
+    } else {
+      alert(`That number is not from 1 to 20. Try again!`);
+    }
   }
 }
 
