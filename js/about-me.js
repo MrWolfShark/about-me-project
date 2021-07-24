@@ -12,7 +12,7 @@ console.log("username= " + username);
 alert(`Welcome to Aaron's About Me Page ${username}!\n Please look around and learn more about Aaron. There is a button at the bottom of the page to take the quiz at the end!`);
 
 alert("Thanks for learning about Aaron. Please answer the following 5 Yes or No questions followed by 2 open answer questions.");
-function questionOne() {
+function questionOne(correctAnswerCount) {
   while (true) { 
     // Asks user question
     let question = prompt("1. Was Aaron born in Kansas?");
@@ -36,8 +36,9 @@ function questionOne() {
       alert("That is not a valid answer. Try again.")
     }
   }
+  return correctAnswerCount
 }
-function questionTwo() {
+function questionTwo(correctAnswerCount) {
   while (true) {
     // Asks user question
     let question = prompt("2. Was Aaron a member of the United States Air Force?");
@@ -61,8 +62,9 @@ function questionTwo() {
       alert("That is not a valid answer. Try again.")
     }
   }
+  return correctAnswerCount
 }
-function questionThree() {
+function questionThree(correctAnswerCount) {
   while (true) {
     // Asks user question
     let question = prompt("3. Did Aaron focus on data center networking in career?");
@@ -86,8 +88,9 @@ function questionThree() {
       alert("That is not a valid answer. Try again.")
     }
   }
+  return correctAnswerCount
 }
-function questionFour() {
+function questionFour(correctAnswerCount) {
   while (true) {
     // Asks user question
     let question = prompt("4. Has Aaron travelled outside the US?");
@@ -111,8 +114,9 @@ function questionFour() {
       alert("That is not a valid answer. Try again.")
     }
   }
+  return correctAnswerCount
 }
-function questionFive() {
+function questionFive(correctAnswerCount) {
   while (true) {
     // Asks user question
     let question = prompt("5. Is Aaron's short term goal to be the Director of Engineering Services at his company?");
@@ -136,8 +140,9 @@ function questionFive() {
       alert("That is not a valid answer. Try again.")
     }
   }
+  return correctAnswerCount
 }
-function questionSix() {
+function questionSix(correctAnswerCount) {
 // sets number of attempts allowed 
   let attempts = 4;
   //generates random number between 1 and 20
@@ -175,8 +180,9 @@ function questionSix() {
       alert(`That number is not from 1 to 20. Try again!`);
     }
   }
+  return correctAnswerCount
 }
-function questionSeven() {
+function questionSeven(correctAnswerCount) {
   // array of possible answers
   let listOfColors = ['GREEN', 'BLUE', 'PURPLE', 'WHITE', 'BLACK', 'RED', 'YELLOW', 'ORANGE', 'CYAN', 'MAGENTA', 'BROWN', 'TAN']
   // arrays of correct answers
@@ -211,7 +217,16 @@ function questionSeven() {
       }
     }
   }
+  return correctAnswerCount
 }
+
+correctAnswerCount = questionOne(correctAnswerCount);
+correctAnswerCount = questionTwo(correctAnswerCount);
+correctAnswerCount = questionThree(correctAnswerCount);
+correctAnswerCount = questionFour(correctAnswerCount);
+correctAnswerCount = questionFive(correctAnswerCount);
+correctAnswerCount = questionSix(correctAnswerCount);
+correctAnswerCount = questionSeven(correctAnswerCount);
 // math for score calculation
 let score = correctAnswerCount / 7
 score = Math.round(score * 100)
